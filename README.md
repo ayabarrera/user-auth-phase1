@@ -8,7 +8,8 @@
 
 ## GOALS
 - [DONE] Set up directus database on Render.com.
-- [    ] Create a simple "article" collection on directus database.
+- [DONE] Create a simple "article" collection on directus database.
+- [DONE] Enable Public Registration on Directus - allows any user to create a user
 - [    ] MVP: Set up directus authentication for login, logout, signup
 - [    ] Check if the codes properly call out all the authentication & functions created.
 - [    ] Set up author role to only be able to edit their own content -> Created user must be automatically author role.
