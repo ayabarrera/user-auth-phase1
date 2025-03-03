@@ -23,4 +23,5 @@
 ## RESOURCES
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
 [Directus Authentication in Next JS](https://directus.io/docs/tutorials/getting-started/using-authentication-in-next-js)
-# user-auth-phase1
+
+
