@@ -20,6 +20,16 @@
   - Outline and build components (minimal styles, focus on functionality)
   - Style content and make it responsive
 
+## DEBUG
+- [FIXED] Welcome page : landing page not showing (restriction: doesn't have any access)
+  - created a *global* (can be named anything) collection in Directus that would serve as our "landing page" for our public users. 
+  - Settings -> User Roles -> Public -> choose "Global collection" -> Allow to READ only.
+- [FIXED] Users sign-up not following through. 
+  - created posts collection
+    - Created an "Authenticated Users" -> so that every new registration automatically sets to this.
+    - Added {"author": "$CURRENT_USER"} and other customization 
+    - Enabled public registration : settings -> public registration -> public registration role ->        Authenticated Users
+    - Also added an error message which tells the users to create atleast 8 min for passwords
 
 ## RESOURCES
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
