@@ -12,7 +12,7 @@ export default async function Dashboard() {
       <form action="/api/auth/logout" method="POST">
         <button type="submit">Logout</button>
       </form>
-      <h1>Welcome!</h1>
+      <h1>Hello,</h1>
       <p>Your id: {response?.user?.id}</p>
       <section>
         <h2>Posts</h2>
