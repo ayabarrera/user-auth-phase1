@@ -7,9 +7,13 @@
 - [DONE] Set up directus database on Render.com.
 - [DONE] Create a simple "article" collection on directus database.
 - [DONE] Enable Public Registration on Directus - allows any user to create a user
-- [ ] MVP: Set up directus authentication for login, logout, signup
-- [ ] Check if the codes properly call out all the authentication & functions created.
+- [DONE] MVP: Set up directus authentication for login, logout, signup
+- [DONE] Check if the codes properly call out all the authentication & functions created.
 - [ ] Set up author role to only be able to edit their own content -> Created user must be automatically author role.
+- [ ] Logout button should only be displayed if the user is already logged in (in dashboard)
+- [ ] Fix landing page
+- [ ] Fix colors for sign up and log in page (matches)
+- [ ] Fix content (show even just 1 from the database)
 
 - Modularization:
   - Review code to plan for DRY high level (layouts)
@@ -28,6 +32,11 @@
     - Added {"author": "$CURRENT_USER"} and other customization
     - Enabled public registration : settings -> public registration -> public registration role -> Authenticated Users
     - Also added an error message which tells the users to create atleast 8 min for passwords
+- [FIXED] Homepage -> error for authentication
+  - the global setting was not set properly so that the "public" can see the landing page.
+- [FIXED] Cannot register showing error as email not showing as a "string"
+  - I was honestly lost and do not know which part I messed up, so I had to redo the commits from github where I know the code was last working properly. :<
+
 
 ## GLOSSARY
 
@@ -38,6 +47,7 @@
   - THEN [./app/login/page.jsx] : front end which users see (log in credentials)
 - *Data Access Layer* [./lib/dal.jsx] : server only, checks if user has "session cookie" -> if not send to login page 
 - *Dashboard* [./app/dashboard/page.jsx] : will be shown upon logging in.
+
 ## RESOURCES
 
 [Deploy Directus on Render.com](https://blog.jamin.sh/how-to-deploy-directus-to-rendercom)
