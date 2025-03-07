@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,24 +15,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export default function RootLayout({ children }) {
-  
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/dashboard">Dashboard</Link>
-          <Link href="/login">Log in</Link>
-          <Link href="/register">Register</Link>
-          <Link href="/logout">Log out</Link>
-        </nav>
-
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <div>
-          {pathname !== '/dashboard' && <h1>Site landing</h1>} 
+          <Navbar />
+          {pathname !== "/dashboard" &&
+            pathname !== "/login" &&
+            pathname !== "/register" && <h1>Site landing</h1>}
           {children}
         </div>
       </body>
