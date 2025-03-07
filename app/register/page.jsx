@@ -6,6 +6,8 @@ export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,6 +23,8 @@ export default function RegisterPage() {
       const formData = new FormData();
       formData.append('email', email);
       formData.append('password', password);
+      formData.append('first_name', firstName);
+      formData.append('last_name', lastName);
 
       const response = await fetch('/api/auth/register', {
         method: 'POST',
@@ -44,6 +48,28 @@ export default function RegisterPage() {
     <>
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
         <div>
           <label htmlFor="email">Email:</label>
           <input

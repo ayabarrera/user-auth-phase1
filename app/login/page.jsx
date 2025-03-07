@@ -1,16 +1,32 @@
+import React from "react";
+import "./loginpage.css";
+
 export default function LoginPage() {
-    return (
-      <>
-        <h2>Login</h2>
-        <form action="/api/auth/login" method="POST">
-          <label>Email</label>
-          <input type="email" name="email" required />
-          <label>Password</label>
-          <input type="password" name="password" required />
-          <input type="submit" />
-        </form>
-      </>
-    );
-  }
-  
-  
+  return (
+    <div className="login-container">
+      <h1>Login to your account</h1>
+      <p className="signup-link">Don't have an account? <a href="/register">Sign Up</a></p>
+      <form action="/api/auth/login" method="POST" className="login-form">
+        <div className="input-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required
+          />
+        </div>
+        <div className="input-group">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit" className="login-button">
+          Login
+        </button>
+      </form>
+    </div>
+  );
+}
