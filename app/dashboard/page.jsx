@@ -6,14 +6,14 @@ export default async function Dashboard() {
   const response = await getUserData();
   const posts = await client.request(readItems('posts'));
   
-  const firstName = response?.user?.first_name || 'User';
+  // const firstName = response?.user?.first_name;
 
   return (
     <main>
       <form action="/api/auth/logout" method="POST">
        
       </form>
-      <h1>Hello, {firstName}</h1>
+      <h1>Hello, {response?.user?.first_name}</h1>
       <section>
         <h2>Posts</h2>
         {posts.length > 0 ? (
