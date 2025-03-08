@@ -1,0 +1,64 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .left-column {
+    width: 90%;
+    padding: 20px;
+    background-color: rgb(90, 89, 89);
+    color: white;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  
+  .right-column {
+    width: 10%;
+    background-color: #4DB6AC;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+
+  }
+  
+  .logout-form {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .logout-form button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .logout-form button:hover {
+    text-decoration: underline;
+  }
+  
+  .right-column nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+  }
+  
+  .right-column nav ul li {
+    margin-bottom: 5px; 
+  }
+  
+  .right-column nav ul li a {
+    text-decoration: none; 
+    color: inherit; 
+  }
+
+  .right-column nav ul li a:hover {
+    text-decoration: underline;
+  }
