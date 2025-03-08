@@ -6,18 +6,27 @@ import { redirect } from "next/navigation";
 
 export async function getUserData() {
   try {
-    const token = (await cookies()).get("directus_session_token")?.value;
+    const token = cookies().get("directus_session_token")?.value;
+    console.log("Token:", token);
 
     if (!token) {
-      redirect("/login"); 
+      console.log("No token found. Redirecting...");
+      redirect("/login");
     }
 
     client.setToken(token);
-    const user = await client.request(readMe());
+
+    // Explicitly request first_name
+    const user = await client.request(readMe({ fields: ["id", "first_name"] }));
+    console.log("User data:", JSON.stringify(user, null, 2)); // Debug
+
+    if (!user?.first_name) {
+      console.log("⚠️ first_name is missing from response. Check Directus permissions.");
+    }
 
     return { success: true, user };
   } catch (error) {
-    console.log(error);
-    redirect("/login"); 
+    console.error("Error fetching user data:", error);
+    redirect("/login");
   }
 }
