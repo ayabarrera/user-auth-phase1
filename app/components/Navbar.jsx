@@ -6,6 +6,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="logo">Your Logo</div>
       <div className="links">
+        <a href="/dashboard" className="link">Dashboard</a>
         <a href="/login" className="link">Login</a>
         <a href="/register" className="link">Sign Up</a>
       </div>

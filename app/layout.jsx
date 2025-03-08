@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {pathname !== "/dashboard" &&
             pathname !== "/login" &&
-            pathname !== "/register" && <h1>Site landing</h1>}
+            pathname !== "/register"}
           {children}
         </div>
       </body>
