@@ -8,7 +8,6 @@ function Navbar() {
       <div className="links">
         <a href="/login" className="link">Login</a>
         <a href="/register" className="link">Sign Up</a>
-        <button type="submit">Logout</button>
       </div>
     </nav>
   );
