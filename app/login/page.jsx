@@ -5,7 +5,6 @@ export default function LoginPage() {
   return (
     <div className="login-container">
       <h1>Login to your account</h1>
-      <p className="signup-link">Don't have an account? <a href="/register">Sign Up</a></p>
       <form action="/api/auth/login" method="POST" className="login-form">
         <div className="input-group">
           <input
@@ -27,6 +26,7 @@ export default function LoginPage() {
           Login
         </button>
       </form>
+      <p className="signup-link">Don't have an account? <a href="/register">Sign Up</a></p>
     </div>
   );
 }
