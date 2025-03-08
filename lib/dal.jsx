@@ -16,9 +16,7 @@ export async function getUserData() {
 
     client.setToken(token);
 
-    // Explicitly request first_name
     const user = await client.request(readMe({ fields: ["id", "first_name"] }));
-    console.log("User data:", JSON.stringify(user, null, 2)); // Debug
 
     if (!user?.first_name) {
       console.log("⚠️ first_name is missing from response. Check Directus permissions.");
