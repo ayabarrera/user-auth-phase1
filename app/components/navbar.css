@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: #000000;
+    color: white;
   }
   
   .logo {
@@ -15,4 +16,9 @@
   .link {
     margin-right: 10px;
     text-decoration: none;
+    color: white;
+  }
+
+  .link:hover {
+    color: #167067;
   }
