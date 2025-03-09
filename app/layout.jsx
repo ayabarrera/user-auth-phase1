@@ -24,10 +24,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
-          <Navbar />
+          <Navbar />   
           {pathname !== "/dashboard" &&
             pathname !== "/login" &&
-            pathname !== "/register"}
+            pathname !== "/register" && <></>}
           {children}
         </div>
       </body>

@@ -1,0 +1,70 @@
+.landing-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background: url('/flower.jpg') no-repeat center center/cover;
+    filter: brightness(50%);
+    z-index: -1;
+  }
+  
+  .hero-content {
+    position: relative;
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  /* site title */
+  .site-title {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  /* Dynamic message from Directus */
+  .dynamic-message {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0.9;
+  }
+  
+  /* Static info message */
+  .static-info {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.85;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #1e40af; /* change if needed */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #1e3a8a; /* change if needed */
+  }
+  
