@@ -12,13 +12,13 @@
 - [DONE] Logout button should only be displayed if the user is already logged in (in dashboard)
 - [DONE] Fix landing page
 - [DONE] Fix colors for sign up and log in page (matches)
-- [ ] Fix content (show even just 1 from the database)
+- [DONE] Fix content (show even just 1 from the database) -> Create a "community post", we added one article from Pen & Pixel.
 
 - Modularization:
-  - Review code to plan for DRY high level (layouts)
-  - Review code for needed error handling (user facing and dev facing)
-  - Outline and build components (minimal styles, focus on functionality)
-  - Style content and make it responsive
+  - [DONE] Review code to plan for DRY high level (layouts)
+  - [DONE] Review code for needed error handling (user facing and dev facing)
+  - [DONE] Outline and build components (minimal styles, focus on functionality)
+  - [DONE] Style content and make it responsive
 
 ## DEBUG
 
@@ -35,6 +35,11 @@
   - the global setting was not set properly so that the "public" can see the landing page.
 - [FIXED] Cannot register showing error as email not showing as a "string"
   - I was honestly lost and do not know which part I messed up, so I had to redo the commits from github where I know the code was last working properly. :<
+- [BACKBURNER] The image from the article of Pen & Pixel is not showing
+    - Instead of the website rendering the whole URL, its just getting the "file name" since we only used the blogpost.image.
+    - Add in the "DIRECTUS_URL/assets/blogpost.image" so it gets the full url of the file location
+    - Worked, but the authenticated user does not have permission to access -> change from Directus 
+    - really could not make it work for now, we can see the image if we click the url from the console.log but the website is not rendering the image.
 
 
 ## GLOSSARY
