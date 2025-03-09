@@ -1,7 +1,10 @@
+import BlogPosts from '../components/BlogPost';
 import { getUserData } from '@/lib/dal';
 import client from '@/lib/directus';
 import { readItems } from '@directus/sdk';
-import styles from './dashboard.module.css'; 
+import styles from './dashboard.module.css';
+
+
 
 export default async function Dashboard() {
   const response = await getUserData();
@@ -11,8 +14,10 @@ export default async function Dashboard() {
     <main className={styles.main}>
       <div className={styles['left-column']}>
         <h1>Hello, {response?.user?.first_name || 'User'}</h1>
-        <section>
-          <h2>Posts</h2>
+
+        {/* Your Posts Section */}
+        <section className={styles['post-section']}>
+          <h2>Your Posts</h2>
           {posts.length > 0 ? (
             <ul>
               {posts.map((post) => (
@@ -25,7 +30,16 @@ export default async function Dashboard() {
             <p>No posts available.</p>
           )}
         </section>
+
+        {/* Blog Posts Section */}
+        <div>
+        <section className={styles['blogposts-section']}>
+          <BlogPosts />
+        </section>
+        </div>
+
       </div>
+
       <div className={styles['right-column']}>
         <div className={styles['logout-form']}>
           <form action="/api/auth/logout" method="POST">
