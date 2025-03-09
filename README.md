@@ -9,10 +9,9 @@
 - [DONE] Enable Public Registration on Directus - allows any user to create a user
 - [DONE] MVP: Set up directus authentication for login, logout, signup
 - [DONE] Check if the codes properly call out all the authentication & functions created.
-- [ ] Set up author role to only be able to edit their own content -> Created user must be automatically author role.
-- [ ] Logout button should only be displayed if the user is already logged in (in dashboard)
-- [ ] Fix landing page
-- [ ] Fix colors for sign up and log in page (matches)
+- [DONE] Logout button should only be displayed if the user is already logged in (in dashboard)
+- [DONE] Fix landing page
+- [DONE] Fix colors for sign up and log in page (matches)
 - [ ] Fix content (show even just 1 from the database)
 
 - Modularization:
