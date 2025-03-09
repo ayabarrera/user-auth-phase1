@@ -16,6 +16,11 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
