@@ -14,7 +14,7 @@
   .hero-background {
     position: absolute;
     inset: 0;
-    background: url('/flower.jpg') no-repeat center center/cover;
+    background: url('/flower.webp') no-repeat center center/cover;
     filter: brightness(50%);
     z-index: -1;
   }
